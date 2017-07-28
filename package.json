@@ -1,0 +1,41 @@
+{
+  "name": "4track",
+  "version": "1.0.0",
+  "description": "Aplicacion para rastrear en tiempo real la ubicacion, de un dispositivo con GPS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "arduino",
+    "gsm",
+    "gps",
+    "android",
+    "nodejs",
+    "mongodb",
+    "express",
+    "angular",
+    "google",
+    "maps"
+  ],
+  "author": "Pablo Diego Montes Jordan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "helmet": "^3.6.1",
+    "jsonwebtoken": "^7.4.1",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13",
+    "mongoose": "^4.11.1",
+    "morgan": "^1.8.2",
+    "nodemailer": "^4.0.1",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.3",
+    "underscore": "^1.8.3"
+  }
+}

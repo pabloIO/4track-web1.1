@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dispositivo registro</title>
+</head>
+<body>
+<h1>POST /api/v1/dispositivo</h1>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Metodo</th>
+				<th>Host</th>
+				<th>Tipo de aplicacion</th>
+				<th>Body</th>	
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>POST</td>
+				<td>https://4track.tk/api/v1/dispositivo</td>
+				<td>application/json</td>
+				<td>
+					<pre>
+	{
+		"_idUser": String,
+		"nombre": String,
+  		"apellido": String,
+  		"ciudad": String,
+  		"pais": String,
+		"celular": Number,
+		"codigo_area_cel": String,
+  	}
+					</pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p style="padding: 20px;"></p>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Respuesta</th>
+				<th>Tipo de aplicacion</th>
+				<th>Body</th>
+				<th>Exito</th>	
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>HTTP/1.1 200 OK</td>
+				<td>application/json</td>
+				<td>
+					<pre>
+	{
+		"success": true,
+		"msg":"El dispositivo fue guardado con éxito", 
+	}
+					</pre>
+				</td>
+				<td>Verdadero</td>
+			</tr>
+			<tr>
+				<td>HTTP/1.1 500</td>
+				<td>application/json</td>
+				<td>
+					<pre>
+	{
+		"success": false,
+		"msg": "Hubo un error en el servidor" 
+
+	}
+					</pre>
+				</td>
+				<td>Falso: Este error puede darse debido a una desconexión del servidor, o la mala
+					recepción de internet del dispositivo</td>
+			</tr>
+			<tr>
+				<td>HTTP/1.1 200 OK</td>
+				<td>application/json</td>
+				<td>
+					<pre>
+	{
+		"success": false,
+		"msg": "Hubo un error, inténtelo nuevamente" 
+
+	}
+					</pre>
+				</td>
+				<td>Falso: Este error puede darse debido a que los datos no fueron enviados
+					de forma adecuada, y no llegaron al servidor</td>
+			</tr>
+			<tr>
+				<td>HTTP/1.1 200 OK</td>
+				<td>application/json</td>
+				<td>
+					<pre>
+	{
+		"success": false,
+		"msg": "El usuario no existe" 
+
+	}
+					</pre>
+				</td>
+				<td>Falso: Este error es dado debido a que el correo electrónico enviado, no
+					existe dentro la base de datos</td>
+			</tr>
+			<tr>
+				<td>HTTP/1.1 200 OK</td>
+				<td>application/json</td>
+				<td>
+					<pre>
+	{
+		"success": false,
+		"msg": "El dispositivo no fue guardado" 
+
+	}
+					</pre>
+				</td>
+				<td>Falso: Hubo un error en el servidor al crear el dispositivo</td>
+			</tr>
+			<tr>
+				<td>HTTP/1.1 200 OK</td>
+				<td>application/json</td>
+				<td>
+					<pre>
+	{
+		"success": false,
+		"msg": "El usuario no fue actualizado" 
+
+	}
+					</pre>
+				</td>
+				<td>Falso: Hubo un error en el servidor al actualizar los datos del usuario</td>
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+</html>
